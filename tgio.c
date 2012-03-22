@@ -96,14 +96,13 @@ void serve_client(int newfd){
 	gio=g_io_channel_unix_new(newfd);
 	assert(gio);
 
-	gchar *str=NULL;
-
 	const gchar *msg="Hello world from server\n";
 	gsize written=0;
 	g_io_channel_write_chars(gio, msg, strlen(msg), &written, NULL);
 	g_io_channel_flush (gio, NULL);
 
 	gsize readlen=0;
+	gchar *str=NULL;
 	while(G_IO_STATUS_NORMAL==
 			g_io_channel_read_line(gio, &str, &readlen, NULL, NULL)){
 		printf("client %lu: %s", readlen, str);
