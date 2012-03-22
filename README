@@ -1,0 +1,10 @@
+Test glib io channel on socket
+
+Install glib and glib headers:
+	sudo apt-get install libglib.*
+	or
+	sudo yum install glib*
+
+Compile the source
+	make
+
