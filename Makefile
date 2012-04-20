@@ -1,4 +1,4 @@
-CFLAGS = -Wall -I/usr/include/glib-2.0/ -I/usr/lib/glib-2.0/include/
+CFLAGS = -Wall -I/usr/include/glib-2.0/ -I/usr/lib/glib-2.0/include/ -I/usr/lib64/glib-2.0/include
 LDFLAGS = -lglib-2.0
 EXE = tgio
 OBJ = tgio.o
