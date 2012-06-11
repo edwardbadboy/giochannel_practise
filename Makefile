@@ -1,5 +1,5 @@
-CFLAGS = -Wall -I/usr/include/glib-2.0/ -I/usr/lib/glib-2.0/include/ -I/usr/lib64/glib-2.0/include
-LDFLAGS = -lglib-2.0
+CFLAGS = -O0 -Wall -Wextra -g3 -ggdb `pkg-config --cflags glib-2.0`
+LDFLAGS = `pkg-config --libs glib-2.0`
 EXE = tgio
 OBJ = tgio.o
 
